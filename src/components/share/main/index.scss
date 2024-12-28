@@ -1,0 +1,16 @@
+.form__container {
+  width: 40%;
+}
+
+.button__print {
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  color: #ffffff;
+  background-color: #3B1E54;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #563479;
+  }
+}

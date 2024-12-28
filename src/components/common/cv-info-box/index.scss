@@ -1,0 +1,89 @@
+.CvInfoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  color: #3B1E54;
+
+  &__name {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+
+  &__divider {
+    height: 2px;
+    width: 100%;
+    background-color: #3B1E54;
+    margin: 8px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__period {
+    display: flex;
+    gap: 8px;
+    color: #666;
+  }
+
+  &__experience, &__education {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__period-container {
+    display: flex;
+    gap: 4px;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  &__date {
+    color: #666;
+    font-size: 18px;
+  }
+
+  &__date-separator {
+    color: #666;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  &__position, &__university {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__company-info, &__education-info {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__company, &__degree {
+    font-size: 18px;
+  }
+
+  &__city {
+    font-size: 18px;
+    color: #666;
+  }
+
+  &__subject {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+  }
+}

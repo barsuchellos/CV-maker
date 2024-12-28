@@ -1,0 +1,49 @@
+.input {
+  width: 50%;
+  padding: 10px;
+  margin: 6px;
+  font-size: 25px;
+  border: 1px solid #ccc; /* Додаємо рамку до input */
+  border-radius: 5px;   /* Закругляємо кути input */
+  box-sizing: border-box; /*  Включаємо padding та border в загальну ширину */
+}
+
+@media (width < 768px) {
+  .input {
+    width: 80%;
+  }
+}
+
+
+/* Fix autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.label input {
+  width: 100%; /* Розтягуємо input на всю ширину label */
+  vertical-align: middle;
+  box-sizing: border-box; /* Включаємо padding та border в загальну ширину */
+}
+.input {
+  margin: 10px 0;
+}
