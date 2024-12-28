@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+# Project Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application built with React that allows users to easily create professional resumes. Users input their information (work experience, education, skills, etc.) and the app generates a downloadable PDF resume.
 
-Currently, two official plugins are available:
+# Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Intuitive form-based interface for data entry.
+### Dynamic preview of the resume as it's being built.
+### Customizable resume templates.
+### Generates clean, printer-friendly PDF output.
+### Saves user data for future editing.
 
-## Expanding the ESLint configuration
+# Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### **React**: Frontend framework for building user interfaces.
+### **Redux Toolkit**: State management library for predictable state updates.
+### **TypeScript**: Superset of JavaScript for improved code maintainability.
+### **Vite**: Build tool for fast development and optimized output.
+### **SCSS**: CSS preprocessor for modular and maintainable styles.
+### **HTML5, CSS3, JavaScript**: Core web technologies.
 
-- Configure the top-level `parserOptions` property like this:
+# Key Benefits
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### User-friendly interface simplifies resume creation.
+### Fast and efficient resume generation.
+### Customization options for personalized resumes.
+### Easy download and printing of the generated resume.
+This project aims to provide a simple and efficient solution for anyone needing to create a professional resume.
