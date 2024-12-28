@@ -3,9 +3,15 @@ import './index.scss'
 import CvInfoBox from "../../common/cv-info-box/CVInfoBox.tsx";
 import {useSelector} from "react-redux";
 import image from '../../../assets/vectorstock_42797469.svg'
-const PdfFile: FC = ({contentRef}) => {
-    const formData = useSelector(state => state.form)
-    const additionalFormData = useSelector(state => state.addForm)
+import {RootState} from "../../../store/store.ts";
+
+interface PdfFileProps {
+    contentRef: React.RefObject<HTMLDivElement>;
+  }
+
+const PdfFile: FC<PdfFileProps> = ({contentRef}) => {
+    const formData = useSelector((state:RootState) => state.form)
+    const additionalFormData = useSelector((state:RootState) => state.addForm)
 
     return (
         <div ref={contentRef} className='pfdFileA4'>

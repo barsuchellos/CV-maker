@@ -1,3 +1,5 @@
+import { FormState } from "../store/slices/formSlice";
+
 export const newExperienceData = {
     position: '',
     company: '',
@@ -14,3 +16,15 @@ export const newEducationData = {
     from: '',
     to: '',
 };
+
+
+export const initialState: FormState = {
+    Name: '',
+    Position: '',
+    Image: '',
+    Address: '',
+    Number: '',
+    Email: '',
+    Description: '',
+};
+

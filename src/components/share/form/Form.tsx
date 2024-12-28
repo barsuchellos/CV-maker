@@ -4,6 +4,8 @@ import "./index.scss";
 import {useSelector} from "react-redux";
 import Button from "../../common/button/Button.tsx";
 import {useFormHandlers} from "../../../utils/formUtils.ts";
+import {RootState} from "../../../store/store.ts";
+
 const Form: FC = () => {
     const {
         handleChange,
@@ -13,8 +15,8 @@ const Form: FC = () => {
         deleteFormItem
     } = useFormHandlers();
 
-    const formData = useSelector((state) => state.form);
-    const additionalFormData = useSelector((state) => state.addForm);
+    const formData = useSelector((state:RootState) => state.form);
+    const additionalFormData = useSelector((state:RootState) => state.addForm);
 
     return (
         <form className="form-container">

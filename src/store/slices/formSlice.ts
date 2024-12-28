@@ -1,6 +1,8 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { initialState } from "../../utils/formConstants";
 
-interface FormState {
+
+export interface FormState {
     Name: string;
     Position: string;
     Image: string;
@@ -9,16 +11,6 @@ interface FormState {
     Email: string;
     Description: string;
 }
-
-export const initialState: FormState = {
-    Name: '',
-    Position: '',
-    Image: '',
-    Address: '',
-    Number: '',
-    Email: '',
-    Description: '',
-};
 
 const formSlice = createSlice({
     name: 'form',
