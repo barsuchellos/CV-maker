@@ -15,7 +15,7 @@ const Form: FC = () => {
         deleteFormItem
     } = useFormHandlers();
 
-    const formData = useSelector((state:RootState) => state.form);
+    const formData = useSelector((state: RootState) => state.form);
     const additionalFormData = useSelector((state:RootState) => state.addForm);
 
 
@@ -23,7 +23,7 @@ const Form: FC = () => {
     return (
         <form className="form-container">
             {Object.entries(formData)
-                .filter((/* eslint-disable @typescript-eslint/no-unused-vars */[name, value], index, array) => name !== 'Image')
+                .filter(([name]: [string, unknown]) => name !== 'Image')
                 .map(([name, value], index) => (
                     <Input
                         key={index + 999}
