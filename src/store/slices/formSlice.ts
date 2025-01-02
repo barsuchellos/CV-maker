@@ -1,7 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import { initialState } from "../../utils/formConstants";
 
-
 export interface FormState {
     Name: string;
     Position: string;
@@ -19,9 +18,12 @@ const formSlice = createSlice({
         changeData: (state, action: PayloadAction<Partial<FormState>>) => {
             return {...state, ...action.payload};
         },
-        resetData: () => initialState
+        resetData: () => initialState,
+        updateImage: (state, action: PayloadAction<string>) => {
+            state.Image = action.payload;
+        }
     }
 });
 
-export const {changeData, resetData} = formSlice.actions;
+export const {changeData, resetData, updateImage} = formSlice.actions;
 export default formSlice.reducer;

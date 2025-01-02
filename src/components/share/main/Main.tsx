@@ -8,7 +8,7 @@ const Main: FC = () => {
     const handlePrint = useReactToPrint({contentRef});
 
     return (
-        <main style={{display:'flex'}}>
+        <main className='main'>
             <div className='form__container'>
                 <Form/>
                 <button className='button__print' onClick={() => handlePrint()}>

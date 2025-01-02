@@ -18,33 +18,52 @@ const Form: FC = () => {
     const formData = useSelector((state:RootState) => state.form);
     const additionalFormData = useSelector((state:RootState) => state.addForm);
 
+
+
     return (
         <form className="form-container">
-            {Object.entries(formData).map(([name, value], index) => (
-                <Input
-                    key={index + 999}
-                    name={name}
-                    value={value as string}
-                    onChange={handleChange}
-                />
-            ))}
+            {Object.entries(formData)
+                .filter(([name, value]) => name !== 'Image')
+                .map(([name, value], index) => (
+                    <Input
+                        key={index + 999}
+                        name={name}
+                        value={value as string}
+                        onChange={handleChange}
+                    />
+                ))}
+
+            <Input
+                name="Image"
+                type="file"
+                accept="image/*"
+                onChange={handleChange}
+            />
+
             <div className="experience-section">
                 <h3>Experience</h3>
                 {additionalFormData.experience.map((element, index) => (
                     <div key={`experience-${index}`} className="experience-item">
                         {Object.entries(element).map(([field, value]) => (
-                                <Input
-                                    key={index + 755}
-                                    name={field}
-                                    value={value as string}
-                                    onChange={(e) => handleAdditionalChange(e, 'experience', index)}
-                                />
+                            <Input
+                                key={index + 755}
+                                name={field}
+                                value={value as string}
+                                onChange={(e) => handleAdditionalChange(e, 'experience', index)}
+                            />
                         ))}
-                        <Button type="button" onClick={() => deleteFormItem('experience', index)}
-                                text={'Delete'}/>
+                        <Button
+                            type="button"
+                            onClick={() => deleteFormItem('experience', index)}
+                            text={'Delete'}
+                        />
                     </div>
                 ))}
-                <Button type="button" onClick={() => additionalObjectData('experience')} text={'Add experience'}/>
+                <Button
+                    type="button"
+                    onClick={() => additionalObjectData('experience')}
+                    text={'Add experience'}
+                />
             </div>
 
             <div className="education-section">
@@ -61,14 +80,27 @@ const Form: FC = () => {
                                 />
                             </>
                         ))}
-                        <Button type="button" onClick={() => deleteFormItem('education', index)}
-                                text={'Delete'}/>
+                        <Button
+                            type="button"
+                            onClick={() => deleteFormItem('education', index)}
+                            text={'Delete'}
+                        />
                     </div>
                 ))}
-                <Button type="button" onClick={() => additionalObjectData('education')} text={'Add education'}/>
-                <Button type="button" onClick={() => resetValuesData()} text={'Reset All'}/>
+
+                <Button
+                    type="button"
+                    onClick={() => additionalObjectData('education')}
+                    text={'Add education'}
+                />
+                <Button
+                    type="button"
+                    onClick={() => resetValuesData()}
+                    text={'Reset All'}
+                />
             </div>
         </form>
     );
 };
+
 export default Form;

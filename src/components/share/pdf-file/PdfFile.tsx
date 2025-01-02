@@ -38,7 +38,7 @@ const PdfFile: FC<PdfFileProps> = ({contentRef}) => {
                             <img src={formData['Image'] || image} alt="User photo" className='pfdFileA4__photo'/>
                         </div>
                         <div className='pfdFileA4__details-section'>
-                            <h3 className='pfdFileA4__details-title'>Personal Details</h3>
+                        <h3 className='pfdFileA4__details-title'>Personal Details</h3>
                             <div className='pfdFileA4__details-group'>
                                 <h4 className='pfdFileA4__details-label'>Address:</h4>
                                 <p className='pfdFileA4__details-value'>{formData['Address']}</p>

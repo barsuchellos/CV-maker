@@ -13,4 +13,20 @@
   &:hover {
     background-color: #563479;
   }
+
+
+}
+
+.main {
+  display: flex;
+}
+
+@media (width < 950px) {
+  .main {
+    display: block;
+  }
+
+  .form__container {
+    width: 100%;
+  }
 }
