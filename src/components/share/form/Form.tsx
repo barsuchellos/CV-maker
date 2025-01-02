@@ -23,7 +23,7 @@ const Form: FC = () => {
     return (
         <form className="form-container">
             {Object.entries(formData)
-                .filter(([name, value]) => name !== 'Image')
+                .filter((/* eslint-disable @typescript-eslint/no-unused-vars */[name, value], index, array) => name !== 'Image')
                 .map(([name, value], index) => (
                     <Input
                         key={index + 999}
